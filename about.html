@@ -31,6 +31,7 @@
         <!-- Custom styles for this template -->
         <link rel="stylesheet" href="static//css/style.css">
         <link rel="stylesheet" href="static//css/cover.css">
+		<link rel="stylesheet" href="static//css/emailForm.css">
 
         <!-- Font VGA -->
         <link href="http://fonts.cdnfonts.com/css/perfect-dos-vga-437" rel="stylesheet">
@@ -39,6 +40,9 @@
         <link rel="stylesheet" type="text/css" href="static//css/datatables/dataTables.css">
         <script src="static/js/datatables/jquery.js"></script>
         <script src="static/js/datatables/jquery.dataTables.js"></script>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="static/js/service/about.js"></script>
     </head>
 
     <body>
@@ -69,10 +73,37 @@
                         <p class="lead mb-4">Para ello ofreciendo ofertas de empleo, alojamientos, información de los pueblos y más datos de interés.</p>
                     </div>
 					<div width="100%" style="position: relative; margin-bottom:5px;">
-						<img width="100%" src="static/images/imagenGanadores.svg" style="position: relative;  box-shadow: 0px 0px 6px rgb(119, 119, 119); border-radius: 30px;" />
-						<img width="100%" src="static/images/ismael_en_ganadores.svg" style="visibility: hidden;pointer-events: auto;left: 0px; position: absolute; box-shadow: 0px 0px 6px rgb(119, 119, 119); border-radius: 30px; " onclick="console.log('hola')"/>
-						
+						<img width="100%" src="static/images/imagenGanadores.jfif" style="position: relative;  box-shadow: 0px 0px 6px rgb(119, 119, 119); border-radius: 30px;" />
+						<img id="ismaelGanadores" width="100%" src="static/images/ismael_en_ganadores.svg" class="ismaelGanadores" style="opacity: 0;left: 0px; position: absolute; box-shadow: 0px 0px 6px rgb(119, 119, 119); border-radius: 30px; " onclick="console.log('hola')"/>
+						<img id="jorgeGanadores" width="100%" src="static/images/jorge_en_ganadores.svg" class="jorgeGanadores" style="opacity: 0;left: 0px; position: absolute; box-shadow: 0px 0px 6px rgb(119, 119, 119); border-radius: 30px; " onclick="console.log('hola')"/>
+						<img id="jaimeGanadores" width="100%" src="static/images/jaime_en_ganadores.svg" class="jaimeGanadores" style="opacity: 0;left: 0px; position: absolute; box-shadow: 0px 0px 6px rgb(119, 119, 119); border-radius: 30px; " onclick="console.log('hola')"/>
+						<img id="raulGanadores" width="100%" src="static/images/raul_en_ganadores.svg" class="raulGanadores" style="opacity: 0;left: 0px; position: absolute; box-shadow: 0px 0px 6px rgb(119, 119, 119); border-radius: 30px; " onclick="console.log('hola')"/>
+						<img id="ayelenGanadores" width="100%" src="static/images/ayelen_en_ganadores.svg" class="ayelenGanadores" style="opacity: 0;left: 0px; position: absolute; box-shadow: 0px 0px 6px rgb(119, 119, 119); border-radius: 30px; " onclick="console.log('hola')"/>
+						<img id="dianaGanadores" width="100%" src="static/images/diana_en_ganadores.svg" class="dianaGanadores" style="opacity: 0;left: 0px; position: absolute; box-shadow: 0px 0px 6px rgb(119, 119, 119); border-radius: 30px; " onclick="console.log('hola')"/>
+						<!-- EMAIL FORM --------------------------------->
+						<div id="login-box" class="login-box">
+						  <h2 id="escribirA">Escribir a Ismael</h2>
+						  <form>
+							<div class="user-box">
+							  <input type="text" name="" required="">
+							  <label>Asunto</label>
+							</div>
+							<div class="user-box">
+							  <input type="text" name="" required="">
+							  <label>Mensaje</label>
+							</div>
+							<a href="#">
+							  <span></span>
+							  <span></span>
+							  <span></span>
+							  <span></span>
+							  Enviar
+							</a>
+						  </form>
+						</div>
+						<!-- EMAIL FORM ENDS ---------------------------->
 					</div>
+					
 					
                 </section>
 
@@ -82,42 +113,42 @@
                     <h2 class="mb-5 blue-txt">Creada por</h2>
                     <div class="row" style="margin-bottom:10px;">
                         <div class="col-lg-4">
-                            <img class="mb-3 rounded-circle" src="static/images/jorge.png" alt="Jorge" width="140" height="140">
+                            <img class="mb-3 rounded-circle" src="static/images/jorge.jfif" alt="Jorge" width="140" height="140">
                             <h2 class="fw-normal cyan-txt">Jorge Aranda</h2>
                             <p>arandasanzjorge@gmail.com</p>
-                            <p><a class="btn btn-secondary" href="mailto:arandasanzjorge@gmail.com">Send mail »</a></p>
+                            <p><a class="btn btn-secondary" onclick="sendEmailTo('arandasanzjorge@gmail.com')">Send mail »</a></p>
                         </div>
                         <div class="col-lg-4">
-                            <img class="mb-3 rounded-circle" src="static/images/raul.png" alt="Raúl" width="140" height="140">
+                            <img class="mb-3 rounded-circle" src="static/images/raul.jfif" alt="Raúl" width="140" height="140">
                             <h2 class="fw-normal cyan-txt">Raúl López</h2>
                             <p>lopez.franco@gmail.com</p>
-                            <p><a class="btn btn-secondary" href="mailto:lopez.franco@gmail.com">Send mail »</a></p>
+                            <p><a class="btn btn-secondary" onclick="sendEmailTo('lopez.franco@gmail.com')">Send mail »</a></p>
                         </div>
                         <div class="col-lg-4">
-                            <img class="mb-3 rounded-circle" src="static/images/ayelen.png" alt="Ayelen" width="140" height="140">
+                            <img class="mb-3 rounded-circle" src="static/images/ayelen.jfif" alt="Ayelen" width="140" height="140">
                             <h2 class="fw-normal cyan-txt">Ayelen Nuño</h2>
                             <p>ayelennuno@gmail.com</p>
-                            <p><a class="btn btn-secondary" href="mailto:ayelennuno@gmail.com">Send mail »</a></p>
+                            <p><a class="btn btn-secondary" onclick="sendEmailTo('ayelennuno@gmail.com')">Send mail »</a></p>
                         </div>
                     </div>
 					<div class="row">
                         <div class="col-lg-4">
-                            <img class="mb-3 rounded-circle" src="static/images/jaime.png" alt="Jaime" width="140" height="140">
+                            <img class="mb-3 rounded-circle" src="static/images/jaime.jfif" alt="Jaime" width="140" height="140">
                             <h2 class="fw-normal cyan-txt">Jaime Roncal</h2>
                             <p>jaimeroncalperez@gmail.com</p>
-                            <p><a class="btn btn-secondary" href="mailto:jaimeroncalperez@gmail.com">Send mail »</a></p>
+                            <p><a class="btn btn-secondary" onclick="sendEmailTo('jaimeroncalperez@gmail.com')">Send mail »</a></p>
                         </div>
                         <div class="col-lg-4">
-                            <img class="mb-3 rounded-circle" src="static/images/diana.png" alt="Diana" width="140" height="140">
+                            <img class="mb-3 rounded-circle" src="static/images/diana.jfif" alt="Diana" width="140" height="140">
                             <h2 class="fw-normal cyan-txt">Diana Salueña</h2>
                             <p>dianasaluena@gmail.com</p>
-                            <p><a class="btn btn-secondary" href="mailto:dianasaluena@gmail.com">Send mail »</a></p>
+                            <p><a class="btn btn-secondary" onclick="sendEmailTo('dianasaluena@gmail.com')">Send mail »</a></p>
                         </div>
                         <div class="col-lg-4">
-                            <img class="mb-3 rounded-circle" src="static/images/ismael.png" alt="Ismael" width="140" height="140">
+                            <img class="mb-3 rounded-circle" src="static/images/ismael.jfif" alt="Ismael" width="140" height="140">
                             <h2 class="fw-normal cyan-txt">Ismael Tienda</h2>
                             <p>ismaeltienda@gmail.com</p>
-                            <p><a class="btn btn-secondary" href="mailto:ismaeltienda@gmail.com">Send mail »</a></p>
+                            <p><a class="btn btn-secondary" onclick="sendEmailTo('ismaeltienda@gmail.com')">Send mail »</a></p>
                         </div>
                     </div>
                 </div>
@@ -140,4 +171,5 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="static/js/popper.min.js"></script>
     <script src="static/bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+	
 </html>
