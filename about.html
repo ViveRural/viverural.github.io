@@ -42,6 +42,7 @@
         <script src="static/js/datatables/jquery.dataTables.js"></script>
 		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
 		<script src="static/js/service/about.js"></script>
     </head>
 
@@ -85,14 +86,14 @@
 						  <h2 id="escribirA">Escribir a Ismael</h2>
 						  <form>
 							<div class="user-box">
-							  <input type="text" name="" required="">
+							  <input id="Asunto" type="text" name="" required="" onchange="construitHREF()">
 							  <label>Asunto</label>
 							</div>
 							<div class="user-box">
-							  <input type="text" name="" required="">
+							  <input id="Cuerpo" type="text" name="" required="" onchange="construitHREF()">
 							  <label>Mensaje</label>
 							</div>
-							<a onclick="sendMail('Vive', 'viveruralapp@gmail.com', 'My first Mailjet email', 'Greetings from Mailjet.');">
+							<a id="hrefMail" href="" onclick="enviar()" >
 							  <span></span>
 							  <span></span>
 							  <span></span>

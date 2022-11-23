@@ -1,11 +1,13 @@
 
-
+var dirMail = "";
 
 function sendEmailTo(email) {
 	
 	const t1 = gsap.timeline({defaults: {duration: 2.0, ease:"power1.out"}})
 	
-	notVisiblePeople();;
+	notVisiblePeople();
+	dirMail = email;
+		
 	if(email == 'ismaeltienda@gmail.com') {
 		document.getElementById('escribirA').innerHTML = "Escribir a Ismael";
 		const imagen = document.getElementById('ismaelGanadores');
@@ -82,31 +84,15 @@ function notVisiblePeople() {
 }
 
 
-function sendMail(name, email, subject, message) {
-  console.log('Enviando mail');
-  const myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-  myHeaders.set('Authorization', 'Basic ' + "45fec8b551ea3b805547fee282777330"+":" +"4ff278077f41b6452069abd0c5d9dd95");
+function construitHREF() {
+	document.getElementById('hrefMail').href = "mailto:" + dirMail + "?subject=" + document.getElementById('Asunto').value + "&body=" + document.getElementById('Cuerpo').value;
 
-  const data = JSON.stringify({
-    "Messages": [{
-      "From": {"Email": "viveruralapp@gmail.com", "Name": "Vive"},
-      "To": [{"Email": email, "Name": name}],
-      "Subject": subject,
-      "TextPart": message,
-	  "HTMLPart": "<h3>Dear passenger 1, welcome to <a href=\'https://www.mailjet.com/\'>Mailjet</a>!</h3><br />May the delivery force be with you!",
-	  "CustomID": "AppGettingStartedTest"
-    }]
-  });
+}
 
-  const requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: data
-  };
 
-  fetch("https://api.mailjet.com/v3.1/send", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+function enviar() {
+	setTimeout(() => {
+			document.getElementById('Asunto').value = "";
+			document.getElementById('Cuerpo').value = "";		
+	}, 200);
 }
