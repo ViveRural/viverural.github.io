@@ -29,15 +29,15 @@
         <link rel="stylesheet" href="static/bootstrap-5.2.2-dist/css/bootstrap.min.css">
 
         <!-- Custom styles for this template -->
-        <link rel="stylesheet" href="static//css/style.css">
-        <link rel="stylesheet" href="static//css/cover.css">
-		<link rel="stylesheet" href="static//css/emailForm.css">
-
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="stylesheet" href="static/css/cover.css">
+		<link rel="stylesheet" href="static/css/emailForm.css">
+	
         <!-- Font VGA -->
-        <link href="http://fonts.cdnfonts.com/css/perfect-dos-vga-437" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/perfect-dos-vga-437" rel="stylesheet">
 
         <!-- Datatables see https://cloudtables.com/-->
-        <link rel="stylesheet" type="text/css" href="static//css/datatables/dataTables.css">
+        <link rel="stylesheet" type="text/css" href="static/css/datatables/dataTables.css">
         <script src="static/js/datatables/jquery.js"></script>
         <script src="static/js/datatables/jquery.dataTables.js"></script>
 		
@@ -92,7 +92,7 @@
 							  <input type="text" name="" required="">
 							  <label>Mensaje</label>
 							</div>
-							<a href="#">
+							<a onclick="sendMail('Vive', 'viveruralapp@gmail.com', 'My first Mailjet email', 'Greetings from Mailjet.');">
 							  <span></span>
 							  <span></span>
 							  <span></span>
@@ -171,5 +171,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="static/js/popper.min.js"></script>
     <script src="static/bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+	<script src="static/js/service/about.js"></script>
 	
 </html>

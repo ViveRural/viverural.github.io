@@ -80,3 +80,33 @@ function notVisiblePeople() {
 	document.getElementById('jaimeGanadores').style.opacity = 0;
 	document.getElementById('dianaGanadores').style.opacity = 0;
 }
+
+
+function sendMail(name, email, subject, message) {
+  console.log('Enviando mail');
+  const myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+  myHeaders.set('Authorization', 'Basic ' + "45fec8b551ea3b805547fee282777330"+":" +"4ff278077f41b6452069abd0c5d9dd95");
+
+  const data = JSON.stringify({
+    "Messages": [{
+      "From": {"Email": "viveruralapp@gmail.com", "Name": "Vive"},
+      "To": [{"Email": email, "Name": name}],
+      "Subject": subject,
+      "TextPart": message,
+	  "HTMLPart": "<h3>Dear passenger 1, welcome to <a href=\'https://www.mailjet.com/\'>Mailjet</a>!</h3><br />May the delivery force be with you!",
+	  "CustomID": "AppGettingStartedTest"
+    }]
+  });
+
+  const requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: data
+  };
+
+  fetch("https://api.mailjet.com/v3.1/send", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+}
