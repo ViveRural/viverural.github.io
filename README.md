@@ -1,4 +1,3 @@
-# viverural.github.io
-Web de ViveRural
+# Página web [viverural.github.io](https://viverural.github.io/)
 
-![5438567](https://user-images.githubusercontent.com/79214939/203179665-3235d231-398c-49c0-bbaa-78c34a9af73c.png)
+![Vive-Rural](https://user-images.githubusercontent.com/55926526/203852909-ed51a2bd-a0f4-461d-b912-738688802698.png)
