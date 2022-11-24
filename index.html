@@ -29,16 +29,12 @@
         <link rel="stylesheet" href="static/bootstrap-5.2.2-dist/css/bootstrap.min.css">
 
         <!-- Custom styles for this template -->
-        <link rel="stylesheet" href="static//css/style.css">
-        <link rel="stylesheet" href="static//css/cover.css">
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="stylesheet" href="static/css/cover.css">
 
         <!-- Font VGA -->
         <link href="https://fonts.cdnfonts.com/css/perfect-dos-vga-437" rel="stylesheet">
 
-        <!-- Datatables see https://cloudtables.com/-->
-        <link rel="stylesheet" type="text/css" href="static//css/datatables/dataTables.css">
-        <script src="static/js/datatables/jquery.js"></script>
-        <script src="static/js/datatables/jquery.dataTables.js"></script>
     </head>
 
     <body>
@@ -50,70 +46,40 @@
                 <div class="align-middle align-items-center">
                     
 
-                    <a href="/" class="text-decoration-none">
+                    <a href="./index.html" class="text-decoration-none">
                         <img width="40" height="40" src="static/images/viverural.png" style="margin-bottom:5px; box-shadow: 0px 0px 6px rgb(119, 119, 119); border-radius: 11px;"/>
                         <span class="ms-2 fs-4">Vive Rural</span>
                     </a>
                     <nav class="nav nav-masthead justify-content-center">
                         <a class="nav-link active" href="./index.html">Home</a>
+						<a class="nav-link" href="./download.html">Download</a>
                         <a class="nav-link" href="about.html">About</a>
                     </nav>
                 </div>
             </header>
-			<iframe width="90%" height="60%" style="display: block;margin-left: auto;margin-right: auto;" src="https://www.youtube.com/embed/bzISddzfrQU" title="Presentación Vive Rural" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			<!--
-            <main role="main" class="inner cover pb-5 mt-5 customfont">
-                <section class="text-center">
-                    {% if n_regs %}
-                    <h1 class="cover-heading green-txt">Número de registros en la Base de datos: {{ n_regs }}</h1>
-                    {% endif %}
+			
+			<main role="main" class="customfont inner cover pb-5">
+
+                <section class="px-4 my-5 text-center">
+                    <img width="120" height="120" src="static/images/viverural.png" style="margin-bottom:5px; box-shadow: 0px 0px 6px rgb(119, 119, 119); border-radius: 30px;"/>
+                    <h1 class="mb-5 mt-2 display-5 fw-bold white-txt">Vive Rural</h1>
+                    <div class="mx-auto" style="margin-bottom:50px;">
+                        <p class="lead mb-4">Vive Rural es una aplicación que pretende acabar con el problema de la España vaciada conectando a personas de pueblos con gente que quiera ir a vivir a ellos.</p>
+                        <p class="lead mb-4">Para ello ofreciendo ofertas de empleo, alojamientos, información de los pueblos y más datos de interés.</p>
+                    </div>		
+
+					<iframe id="videoYutu" width="90%" height="60%" style="display: block;margin-left: auto;margin-right: auto; position: relative;  box-shadow: 0px 0px 6px rgb(119, 119, 119); border-radius: 20px;" src="https://www.youtube.com/embed/bzISddzfrQU" title="Presentación Vive Rural" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					
                 </section>
 
-                <hr class="dashed mt-5 mb-5 m-auto">
-
-                <section class="text-center container">
-                    <h2 for="search" class="form-label mb-4 yellow-txt">Buscar un registro en la base de datos</h2>
-                    <div class="mx-auto" style="position: relative; display: flex; align-items: stretch; max-width: 40rem; ">
-                        <input id="search-input" type="text" class="search-records" style="border-bottom-right-radius: 0; border-top-right-radius: 0; min-width: 10rem; height: 55px;" placeholder="Nombre del registro"> 
-                        <button id="search-btn" class="btn btn-info search-records-btn" onclick="getProgram()" type="button">Buscar</button>
-                    </div>
-                    <h3 id="found-regs" class="mt-4" style="display: none"> Registros encontrados </h3>
-                    <h2 id="not-found-regs" class="mt-4" style="display: none; color: red;"> No se ha encontrado ningún programa con ese nombre </h2>
-                    <div id="search-table-container" class="bg-white table" style="padding-left: 1rem; padding-right: 1rem; display: none;">
-                        <table id="programs-table" class="display nowrap table" width="100%">
-                        </table>
-                    </div>
-                </section>   
-
-                <hr class="dashed mt-5 mb-5 m-auto">
-
-                <section class="text-center">
-                    <h2 for="search" class="form-label mb-4 cyan-txt">Consultar la base de datos</h2>
-                    <p>Y buscar registros por cinta</p>
-                    <button id="get-progs-btn" class="btn btn-lg btn-secondary" type="button" onclick="getListPrograms()">
-                        Ver todos los programas
-                    </button>
-                    <button id="loading-btn" class="btn btn-lg btn-secondary" type="button" disabled style="background-color: white; color: black; display:none">
-                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                        Cargando los programas...
-                    </button>
-                </section>
-
-                <div id="games-table-container" class="bg-white p-3 table" style="display: none;">
-                    <table id="games-table" class="display nowrap table" width="100%">
-                        <thead>
-                        <tr>
-                            <th>Nº</th>
-                            <th>NOMBRE</th>
-                            <th>GÉNERO</th>
-                            <th>CINTA</th>
-                        </tr>
-                        </thead>
-                        <tbody id="table-body">
-                        </tbody>
-                    </table>
-                </div>
-            </main>-->
+            </main>
+			
+			
+			
+			
+			
+			
+			
 			
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top mastfoot mt-auto">
                 <div class="col-md-7 d-flex align-items-center">
